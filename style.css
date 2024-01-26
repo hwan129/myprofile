@@ -1,0 +1,140 @@
+body {
+  padding: 50px 20%;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+a {
+  text-decoration: none;
+}
+#profile {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  padding: 5px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  box-shadow: 0 0 16px #808080;
+}
+.name {
+  /*flex. padding, margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+}
+.above {
+  display: grid;
+  grid-template-columns: 175px 1fr;
+}
+.above img {
+  grid-row: 1/3;
+}
+.tables,
+.name {
+  padding-left: 50.1px;
+}
+.firstT {
+  vertical-align: bottom;
+  height: 30px;
+}
+.secondT,
+.name div {
+  vertical-align: top;
+
+  font-family: Arial;
+  font-weight: 500;
+  font-size: small;
+}
+.firstT,
+.secondT {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.firstT div,
+.secondT div {
+  text-align: center;
+}
+.below {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bdbdbd;
+  padding-top: 15px;
+
+  font-size: 15px;
+}
+.left div {
+  padding-bottom: 5px;
+}
+.right {
+  /*여기서 font조절 안되는 이유. .insta, .github에서 함*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.fa-instagram,
+.fa-github {
+  font-size: 70px;
+
+  color: black;
+  padding: 10px 15px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  box-shadow: 0 0 16px #808080;
+}
+.myworks {
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  text-align: center;
+  letter-spacing: 5px;
+  color: #808080;
+}
+.photos,
+.line {
+  display: grid;
+  grid-gap: 5px;
+}
+.line {
+  grid-template-columns: repeat(3, 1fr);
+}
+.line img {
+  width: 100%;
+}
+
+/*그냥 media와 media only screen and ~의 차이*/
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 75px;
+  }
+  .name {
+    align-items: center;
+  }
+  .above img {
+    grid-row: 1;
+  }
+  .tables {
+    grid-area: 2/1/3/3;
+  }
+  .below {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 10px;
+    padding-top: 15px;
+
+    font-size: 15px;
+  }
+}
